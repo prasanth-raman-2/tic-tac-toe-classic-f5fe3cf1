@@ -1,0 +1,154 @@
+/* Game Board Styles */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+.board-status {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  margin: 4px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.square:hover:not(:disabled) {
+  background-color: var(--border-color);
+}
+
+.square.filled {
+  cursor: not-allowed;
+}
+
+/* Game Lobby Styles */
+.game-lobby {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.create-game-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.create-game-btn:hover {
+  opacity: 0.9;
+}
+
+.games-list {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.game-item:last-child {
+  border-bottom: none;
+}
+
+.join-game-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Game History Styles */
+.game-history {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.history-list {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.history-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.game-result {
+  font-weight: bold;
+}
+
+.game-result.won {
+  color: #4caf50;
+}
+
+.game-result.lost {
+  color: #f44336;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Common Styles */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #f44336;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 4px;
+}
